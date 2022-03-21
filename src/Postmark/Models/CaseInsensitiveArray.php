@@ -87,6 +87,7 @@ class CaseInsensitiveArray implements \ArrayAccess, \Iterator {
 		$this->_pointer = 0;
 	}
 
+	#[\ReturnTypeWillChange]
 	public function valid() {
 		return count(array_keys($this->_container)) > $this->_pointer;
 	}
